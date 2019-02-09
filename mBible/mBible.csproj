@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C15A043F-7319-475D-A10F-E795A00C10A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mBible</RootNamespace>
+    <AssemblyName>mBible</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Projects\VisualStudio\mBible\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://jacksiro.github.io/vsb4pc</SupportUrl>
+    <ErrorReportUrl>http://jacksiro.github.io/vsb4pc</ErrorReportUrl>
+    <ProductName>mBible</ProductName>
+    <PublisherName>Jackson Siro</PublisherName>
+    <SuiteName>mBible</SuiteName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.0.5.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>52CEFE509AF4C03FEB4EC3E381CBEE827A5850A8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>mBible_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>mBible.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyTabs, Version=1.3.3.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\controls\EasyTabs\EasyTabs.dll</HintPath>
+    </Reference>
+    <Reference Include="Jacksiro.MdiTab">
+      <HintPath>..\..\controls\Jacksiro.MdiTab.dll</HintPath>
+    </Reference>
+    <Reference Include="JacksiroCtrl">
+      <HintPath>..\..\controls\JacksiroCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>..\..\controls\EasyTabs\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\controls\EasyTabs\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.NET">
+      <HintPath>..\..\controls\SQLite.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon">
+      <HintPath>..\..\controls\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppFunctions.cs" />
+    <Compile Include="Forms\AppTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppTabs.Designer.cs">
+      <DependentUpon>AppTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CcBibleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CcBibleSearch.Designer.cs">
+      <DependentUpon>CcBibleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AppStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppStart.Designer.cs">
+      <DependentUpon>AppStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CcBookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CcBookList.Designer.cs">
+      <DependentUpon>CcBookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DdProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DdProject.Designer.cs">
+      <DependentUpon>DdProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EeSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EeSettings.Designer.cs">
+      <DependentUpon>EeSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CcBibleHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CcBibleHome.Designer.cs">
+      <DependentUpon>CcBibleHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CcBibleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CcBibleView.Designer.cs">
+      <DependentUpon>CcBibleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AppDatabase.cs" />
+    <EmbeddedResource Include="Forms\AppTabs.resx">
+      <DependentUpon>AppTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CcBibleSearch.resx">
+      <DependentUpon>CcBibleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppStart.resx">
+      <DependentUpon>AppStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CcBookList.resx">
+      <DependentUpon>CcBookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DdProject.resx">
+      <DependentUpon>DdProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EeSettings.resx">
+      <DependentUpon>EeSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CcBibleHome.resx">
+      <DependentUpon>CcBibleHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CcBibleView.resx">
+      <DependentUpon>CcBibleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="mBible_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lappy.png" />
+    <None Include="Resources\laptop.png" />
+    <None Include="Resources\app.jpg" />
+    <None Include="Resources\name1.png" />
+    <None Include="Resources\name2.png" />
+    <None Include="Resources\name3.png" />
+    <None Include="Resources\name4.png" />
+    <None Include="Resources\name5.png" />
+    <None Include="Resources\name6.png" />
+    <None Include="Resources\name7.png" />
+    <None Include="Resources\appicon.png" />
+    <Content Include="app.ico" />
+    <Content Include="langs\Chichewa.txt" />
+    <Content Include="langs\English.txt" />
+    <Content Include="langs\French.txt" />
+    <Content Include="langs\Portuguese.txt" />
+    <Content Include="langs\Spanish.txt" />
+    <Content Include="langs\Swahili.txt" />
+    <None Include="Resources\laptop1.png" />
+    <None Include="Resources\laptop2.png" />
+    <None Include="Resources\laptop3.png" />
+    <None Include="Resources\laptop4.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\appico.ico" />
+    <None Include="Resources\wheat.jpg" />
+    <None Include="Resources\screen.png" />
+    <None Include="Resources\laptop5.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\tools.png" />
+    <Content Include="SQLite3.dll" />
+    <Content Include="mBible.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="langs\Afrikaans.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="mBible.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
